@@ -1,27 +1,27 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class BriefScene : MonoBehaviour {
 
-    public string startGame;
-
-    public string Options;
-
-    public string Menu;
-
-    public void NewGame()
+       public void NewGame()
     {
-        Application.LoadLevel(startGame);
+        SceneManager.LoadScene("Brief");
     }
 
     public void Commandes()
     {
-        Application.LoadLevel(Options);
+        SceneManager.LoadScene("Commandes");
     }
 
     public void BackMenu()
     {
-        Application.LoadLevel(Menu);
+        SceneManager.LoadScene("Menu");
+    }
+
+    public void BeginGame()
+    {
+        SceneManager.LoadScene("City");
     }
 	// Use this for initialization
 	void Start () {
